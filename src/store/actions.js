@@ -6,7 +6,7 @@ export const handleMoviesAsync = (movies) => {
 
 export const handleMovies = () => {
     fetch(movieAPI)
-    .then( resp => resp.json())
+    .then( resp => resp.json() )
     .then( movies => {
         dispatch(handleMoviesAsync(movies))
     } )
