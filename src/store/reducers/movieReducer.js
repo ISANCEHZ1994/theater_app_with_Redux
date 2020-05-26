@@ -1,5 +1,6 @@
 const initialState = {
     movies: [],
+    isLoaded: false
 }
 
 export default function theatherReducer(state = initialState, action){

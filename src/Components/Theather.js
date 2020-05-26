@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import handleMovies from '../store/actions';
 
 
  export default function Theather(){
@@ -7,11 +8,11 @@ import { useSelector, useDispatch } from 'react-redux';
     const movies = useSelector( state => state.movies);
     const dispatch = useDispatch();
     if(!movies.isLoaded){
-        dispatch()
+        dispatch(handleMovies())
     }
     return(
         <>
-
+            Here we got the Theater Page
         </>
     );
 };
