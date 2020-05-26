@@ -1,5 +1,5 @@
 const initialState = {
-    movies = [],
+    movies: [],
 }
 
 export default function theatherReducer(state = initialState, action){
