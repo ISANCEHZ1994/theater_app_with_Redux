@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import handleMovies from '../store/actions';
+import { handleMovies } from '../store/actions'; // function needs curly boys{} or else it wont work
 
 
  export default function Theather(){
@@ -11,9 +11,13 @@ import handleMovies from '../store/actions';
         dispatch(handleMovies())
     }
     return(
-        <>
-            Here we got the Theater Page
-        </>
+        // <>
+        //     Here we got the Theater Page
+        // </>
+        <div>
+            something here?
+        
+        </div>
     );
 };
 
