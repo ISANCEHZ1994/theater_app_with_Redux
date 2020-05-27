@@ -9,6 +9,6 @@ export const handleMovies = (dispatch) => {
     .then( resp => resp.json() )
     .then( movies => {
         dispatch(handleMoviesAsync(movies))
-    } )
+    })
 };
 

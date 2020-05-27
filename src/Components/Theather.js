@@ -5,11 +5,12 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
 
  export default function Theather(){
 
-    const movies = useSelector( state => state.movies);
+    const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
     if(!movies.isLoaded){
         dispatch(handleMovies())
     }
+    
     return(
         // <>
         //     Here we got the Theater Page

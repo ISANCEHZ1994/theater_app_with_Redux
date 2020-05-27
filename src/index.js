@@ -6,7 +6,7 @@ import App from './App';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import rootReducer from './store/reducers/';
+import rootReducer from './store/reducers/'; // you could point specifically to index however it automatically finds it
 
 import * as serviceWorker from './serviceWorker';
 
@@ -19,7 +19,7 @@ ReactDOM.render(
     <Provider store={store}>
     <App />
     </Provider>
-  // </React.StrictMode>
+  //  </React.StrictMode> 
   ,
   document.getElementById('root')
 );
