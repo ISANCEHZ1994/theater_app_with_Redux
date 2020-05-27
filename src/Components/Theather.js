@@ -8,15 +8,15 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
     const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
     if(!movies.isLoaded){
-        dispatch(handleMovies())
+        dispatch(handleMovies)
     }
-    
+
     return(
         // <>
         //     Here we got the Theater Page
         // </>
         <div>
-            something here?
+          {/* {console.log(movies.isLoaded)} */}
         
         </div>
     );
