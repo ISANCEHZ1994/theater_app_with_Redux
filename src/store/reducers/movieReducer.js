@@ -8,7 +8,8 @@ export default function theatherReducer(state = initialState, action){
                 case "FETCH_MOVIES":
                     return{
                         ...state,
-                        movies: action.payload
+                        movies: action.payload,
+                        isLoaded: true
                     }
                     
                     default:

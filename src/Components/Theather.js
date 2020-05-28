@@ -7,31 +7,19 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
 
     const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
-    if(!movies.isLoaded){
+    if(!movies.isLoaded){ 
         dispatch(handleMovies)
     }
+    // console.log(movies.isLoaded)
 
     return(
-        // <>
-        //     Here we got the Theater Page
-        // </>
-        <div>
-          {/* {console.log(movies.isLoaded)} */}
-        
-        </div>
+       
+        <>
+          <h1 style={{textAlign: 'center'}}> Welcome To The ISS Theater Deluxe  </h1>
+            <div>
+                History of some shit about this nice theater
+            </div>
+        </>
     );
 };
 
-// export default class Theather extends React.Component{
-
-
-// render(){
-//     return(
-//         <div>
-//             Here is the Theater Page
-//         </div>
-//     )
-// };
-
-
-// };

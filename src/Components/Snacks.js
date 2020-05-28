@@ -7,7 +7,8 @@ export default class Snacks extends React.Component{
     render(){
         return(
             <div>
-                Here I want snacks
+                <h1 style={{textAlign: 'center'}}> Fancy some snacks? (Snack Section) </h1>
+               I want to create buttons this time not CSS buttons
             </div>
         )
     }
