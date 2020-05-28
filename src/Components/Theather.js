@@ -10,7 +10,7 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
     if(!movies.isLoaded){ 
         dispatch(handleMovies)
     }
-    // console.log(movies.isLoaded)
+    console.log(movies.isLoaded)
 
     return(
        
@@ -22,4 +22,3 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
         </>
     );
 };
-
