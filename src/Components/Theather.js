@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleMovies } from '../store/actions'; // function needs curly boys{} or else it wont work
 import Snacks from '../Components/Snacks';
 
 
  export default function Theather(){
+
+    const [state, useState] = useState();
 
     const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
