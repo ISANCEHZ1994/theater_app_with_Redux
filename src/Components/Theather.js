@@ -4,7 +4,6 @@ import { handleMovies } from '../store/actions'; // function needs curly boys{} 
 import Snacks from '../Components/Snacks';
 
 
-
  export default function Theather(){
 
     const movies = useSelector( state => state.movies); 

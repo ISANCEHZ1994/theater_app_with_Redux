@@ -6,7 +6,6 @@ import Snack from './Snack';
 
 export default class Snacks extends React.Component{
 
-
     render(){
         return(
             <div>
