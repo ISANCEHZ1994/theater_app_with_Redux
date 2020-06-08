@@ -7,10 +7,15 @@ import MovieList from './MovieList';
 
  export default function Theather(){
 
-    // const [state, useState] = useState();
-
     const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
+
+    const [state, setState] = useState({
+        movielist: movies,
+
+    }); 
+
+    
     if(!movies.isLoaded){ 
         dispatch(handleMovies)
     }
@@ -23,7 +28,8 @@ import MovieList from './MovieList';
             <div style={{backgroundColor: 'red'}}>
                 History of some shit about this nice theater
             </div>
-            <MovieList/>
+            <MovieList
+            movielist={state.movies}/>
             <Snacks/>
         </>
     );
