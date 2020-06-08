@@ -28,6 +28,7 @@ import MovieList from './MovieList';
             <div style={{backgroundColor: 'red'}}>
                 History of some shit about this nice theater
             </div>
+            {console.log(movies)}
             <MovieList
             movielist={state.movies}/>
             <Snacks/>
