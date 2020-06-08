@@ -5,7 +5,10 @@ export default class Movie extends React.Component{
     render(){
         return(
             <>
-                an actual moive
+            <div style={{color: 'yellow'}}>
+                 an actual moive
+            </div>
+               
             </>
         )
     }

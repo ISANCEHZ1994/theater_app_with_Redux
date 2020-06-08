@@ -8,7 +8,10 @@ export default class MovieList extends React.Component{
         return(
             <>
                <h1 style={{textAlign: 'center'}}> here is a list of movies</h1>
-                <Movie/>
+               <div style={{backgroundColor: 'blue'}}>
+                    <Movie/>
+               </div>
+               
             </>
         );
     };
