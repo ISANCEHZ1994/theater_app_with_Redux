@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const movieAPI = 'http://www.omdbapi.com/?apikey=91302107'
 
 

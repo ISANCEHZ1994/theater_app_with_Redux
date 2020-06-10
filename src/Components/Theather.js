@@ -19,7 +19,7 @@ import MovieList from './MovieList';
     if(!movies.isLoaded){ 
         dispatch(handleMovies)
     }
-    console.log(movies.isLoaded)
+    // console.log(movies.isLoaded)
 
     return(
        
@@ -28,7 +28,7 @@ import MovieList from './MovieList';
             <div style={{backgroundColor: 'red'}}>
                 History of some shit about this nice theater
             </div>
-            {console.log(movies)}
+            {/* {console.log(movies)} */}
             <MovieList
             movielist={state.movies}/>
             <Snacks/>
