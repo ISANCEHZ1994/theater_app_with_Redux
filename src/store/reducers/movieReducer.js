@@ -13,11 +13,6 @@ export default function theatherReducer(state = initialState, action){
                         movies: action.payload,
                         isLoaded: true
                     }
-                     case "SEARCH_MOVIES":
-                    return{
-                        ...state,
-                        
-                    }
                     default:
                         return state;
             };

@@ -10,10 +10,13 @@ import MovieList from './MovieList';
     const movies = useSelector( state => state.movies); 
     const dispatch = useDispatch();
 
-    const [state, setState] = useState({
-        movielist: movies,
 
-    }); 
+    // this is unnessessary to write IT CAN WORK but WHY would you do that? 
+    //Redux does this for you so can just call it where ever you need it
+
+    // const [state, setState] = useState({  <--------------------------
+    //     movielist: movies,
+    // }); 
 
     
     if(!movies.isLoaded){ 
@@ -30,7 +33,7 @@ import MovieList from './MovieList';
             </div>
             {/* {console.log(movies)} */}
             <MovieList
-            movielist={state.movies}/>
+            movielist={movies}/>
             <Snacks/>
         </>
     );
