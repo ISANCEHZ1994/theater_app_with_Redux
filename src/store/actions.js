@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const movieAPIBatman = 'http://www.omdbapi.com/?apikey=91302107&s=Batman' // this works because we are giving the finished ending to the API Search
-const movieAPI = 'http://www.omdbapi.com/?apikey=91302107'
+     const movieAPI =  'http://www.omdbapi.com/?apikey=91302107'
 
 
 
@@ -29,7 +29,7 @@ export const handleSearchAsync = (results) => {
 
 export const handleSearch = (e) => {
     if(e.key === "Enter"){ // make sure the e in Enter is CAPITALIZE 
-      axios(apiUrl + "&s=" + state.s).then( ({ data }) => { // we want to destructure the data variable because we only want to use some specifc data
+      axios(movieAPI + "&s=" + state.s).then( ({ data }) => { // we want to destructure the data variable because we only want to use some specifc data
         let searchResults = data.Search // NOTE: Since we have are taking this from an already created App we must now switch it put to fit REDUX
 
         dispatch(handleSearchAsync(searchResults))
@@ -41,17 +41,21 @@ export const handleSearch = (e) => {
     }; 
   }; 
 
+  export const handleInputAsync = (specifcMovie) => {
+    return { type: "INPUT_MOVIE", payload: specifcMovie}
+  };
+
    export const handleInput = (e) => { 
     let s = e.target.value
-
-    setState(preState => { 
-      return { ...preState, s: s} 
-    })
+    // setState(preState => { 
+    //   return { ...preState, s: s} 
+    // })
+    dispatch(handleInputAsync(s))
 
   };
 
   export const handleOpenPopUp = (id) => {
-    axios(apiUrl + "&i=" + id).then( ({ data }) => {
+    axios(movieAPI + "&i=" + id).then( ({ data }) => {
       let result = data
 
       setState(prevState => {
