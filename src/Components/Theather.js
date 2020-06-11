@@ -34,6 +34,7 @@ import MovieList from './MovieList';
             {/* {console.log(movies)} */}
             <MovieList
             movielist={movies}/>
+            
             <Snacks/>
         </>
     );
