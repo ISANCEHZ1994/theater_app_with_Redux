@@ -23,19 +23,19 @@ export const handleMovies = (dispatch) => { // <---------------------- We want t
     })
 };
 
-export const handleSearchAsync = (search) => {
-    return { type: "SEARCH_MOVIES", payload: search }
+export const handleSearchAsync = (results) => {
+    return { type: "SEARCH_MOVIES", payload: results }
 }
 
 export const handleSearch = (e) => {
     if(e.key === "Enter"){ // make sure the e in Enter is CAPITALIZE 
       axios(apiUrl + "&s=" + state.s).then( ({ data }) => { // we want to destructure the data variable because we only want to use some specifc data
-        let results = data.Search
+        let searchResults = data.Search // NOTE: Since we have are taking this from an already created App we must now switch it put to fit REDUX
 
-        setState( prevState => {
-          return {...prevState, results: results} 
-        })
-
+        dispatch(handleSearchAsync(searchResults))
+        // setState( prevState => {
+        //   return {...prevState, results: results} 
+        // }) 
       }) 
 
     }; 
@@ -63,7 +63,7 @@ export const handleSearch = (e) => {
   };
 
   export const handleClosedPopUp = () => {
-      
+
     setState( prevState => {
       return { ...prevState, selected: {} }
     })
