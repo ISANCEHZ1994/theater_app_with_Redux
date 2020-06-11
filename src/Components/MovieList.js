@@ -22,7 +22,7 @@ export default function MovieList(props){
         <>
             <h1 style={{textAlign: 'center'}}> here is a list of movies</h1>
                 <div style={{backgroundColor: 'blue'}}>
-                        {console.log(props.movieList)}
+                    {console.log('here to find movies', props.movielist.movies )}
                         <Movie/>
                 </div>
         </>

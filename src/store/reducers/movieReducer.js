@@ -8,6 +8,7 @@ const initialState = {
 export default function theatherReducer(state = initialState, action){
             switch(action.type){
                 case "FETCH_MOVIES":
+                    // console.log('we are in reducer')
                     return{
                         ...state,
                         movies: action.payload,

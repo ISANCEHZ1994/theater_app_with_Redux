@@ -1,6 +1,7 @@
 // import axios from 'axios';
 
-const movieAPI = 'http://www.omdbapi.com/?apikey=91302107&i'
+const movieAPIBatman = 'http://www.omdbapi.com/?apikey=91302107&s=Batman'
+const movieAPI = 'http://www.omdbapi.com/?apikey=91302107'
 
 
 
@@ -13,9 +14,11 @@ export const handleMoviesAsync = (movies) => {
 // When trying to console.log the movies it reveals as undefined
 
 export const handleMovies = (dispatch) => {
-    fetch(movieAPI)
+    fetch(movieAPIBatman)
     .then( resp => resp.json() )
-    .then( ({ movies }) => {
+    .then( ( {Search} ) => { //destructure the EXACT key from json response
+        let movies = Search
+        // console.log('after fetch', Search)
         dispatch(handleMoviesAsync(movies))
     })
 };
