@@ -23,6 +23,22 @@ export const handleMovies = (dispatch) => { // <---------------------- We want t
     })
 };
 
+// HOW TO SEARCH FOR A SPECIFIC MOVIE <--------------------------------------
+
+export const handleInputAsync = (specifcMovie) => {
+    return { type: "INPUT_MOVIE", payload: specifcMovie}
+};
+
+export const handleInput = (e) => { 
+    let s = e.target.value
+    // setState(preState => { 
+    //   return { ...preState, s: s} 
+    // })
+    dispatch(handleInputAsync(s))
+
+};
+
+// THIS SHOULD BE THE RESULTS OF THE SEARCH <------------------------------------
 export const handleSearchAsync = (results) => {
     return { type: "SEARCH_MOVIES", payload: results }
 }
@@ -41,18 +57,7 @@ export const handleSearch = (e) => {
     }; 
   }; 
 
-  export const handleInputAsync = (specifcMovie) => {
-    return { type: "INPUT_MOVIE", payload: specifcMovie}
-  };
-
-   export const handleInput = (e) => { 
-    let s = e.target.value
-    // setState(preState => { 
-    //   return { ...preState, s: s} 
-    // })
-    dispatch(handleInputAsync(s))
-
-  };
+// WHEN CLICKING A MOVIE IT SHOULD OPEN AND CLOSE <---------------------------------------
 
   export const handleOpenPopUp = (id) => {
     axios(movieAPI + "&i=" + id).then( ({ data }) => {
