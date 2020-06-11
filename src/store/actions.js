@@ -33,35 +33,39 @@ export const handleSearch = (e) => {
         let results = data.Search
 
         setState( prevState => {
-          return {...prevState, results: results} // the search function will take the information from the axios(technically a fetch) and store it into the array 'results'
+          return {...prevState, results: results} 
         })
-        console.log(data)
-        
+
       }) 
+
     }; 
   }; 
 
    export const handleInput = (e) => { 
     let s = e.target.value
 
-    setState(preState => { // setState is the method that we made in the hooks above because we - since App function is not a class - a this. is not required
+    setState(preState => { 
       return { ...preState, s: s} 
     })
+
   };
 
   export const handleOpenPopUp = (id) => {
     axios(apiUrl + "&i=" + id).then( ({ data }) => {
       let result = data
-    //   console.log(result)
+
       setState(prevState => {
         return {...prevState, selected: result}
       })
 
     })
+
   };
 
   export const handleClosedPopUp = () => {
+      
     setState( prevState => {
       return { ...prevState, selected: {} }
     })
+
   };
