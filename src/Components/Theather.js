@@ -18,6 +18,9 @@ import MovieList from './MovieList';
     //     movielist: movies,
     // }); 
 
+
+    
+
     
     if(!movies.isLoaded){ 
         dispatch(handleMovies)

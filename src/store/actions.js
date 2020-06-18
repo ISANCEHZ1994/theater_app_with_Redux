@@ -23,58 +23,58 @@ export const handleMovies = (dispatch) => { // <---------------------- We want t
     })
 };
 
-// HOW TO SEARCH FOR A SPECIFIC MOVIE <--------------------------------------
+// // HOW TO SEARCH FOR A SPECIFIC MOVIE <--------------------------------------
 
-export const handleInputAsync = (specifcMovie) => {
-    return { type: "INPUT_MOVIE", payload: specifcMovie}
-};
+// export const handleInputAsync = (specifcMovie) => {
+//     return { type: "INPUT_MOVIE", payload: specifcMovie}
+// };
 
-export const handleInput = (e) => { 
-    let s = e.target.value
-    // setState(preState => { 
-    //   return { ...preState, s: s} 
-    // })
-    dispatch(handleInputAsync(s))
+// export const handleInput = (e) => { 
+//     let s = e.target.value
+//     // setState(preState => { 
+//     //   return { ...preState, s: s} 
+//     // })
+//     dispatch(handleInputAsync(s))
 
-};
+// };
 
-// THIS SHOULD BE THE RESULTS OF THE SEARCH <------------------------------------
-export const handleSearchAsync = (results) => {
-    return { type: "SEARCH_MOVIES", payload: results }
-}
+// // THIS SHOULD BE THE RESULTS OF THE SEARCH <------------------------------------
+// export const handleSearchAsync = (results) => {
+//     return { type: "SEARCH_MOVIES", payload: results }
+// }
 
-export const handleSearch = (e) => {
-    if(e.key === "Enter"){ // make sure the e in Enter is CAPITALIZE 
-      axios(movieAPI + "&s=" + state.s).then( ({ data }) => { // we want to destructure the data variable because we only want to use some specifc data
-        let searchResults = data.Search // NOTE: Since we have are taking this from an already created App we must now switch it put to fit REDUX
+// export const handleSearch = (e) => {
+//     if(e.key === "Enter"){ // make sure the e in Enter is CAPITALIZE 
+//       axios(movieAPI + "&s=" + state.s).then( ({ data }) => { // we want to destructure the data variable because we only want to use some specifc data
+//         let searchResults = data.Search // NOTE: Since we have are taking this from an already created App we must now switch it put to fit REDUX
 
-        dispatch(handleSearchAsync(searchResults))
-        // setState( prevState => {
-        //   return {...prevState, results: results} 
-        // }) 
-      }) 
+//         dispatch(handleSearchAsync(searchResults))
+//         // setState( prevState => {
+//         //   return {...prevState, results: results} 
+//         // }) 
+//       }) 
 
-    }; 
-  }; 
+//     }; 
+//   }; 
 
-// WHEN CLICKING A MOVIE IT SHOULD OPEN AND CLOSE <---------------------------------------
+// // WHEN CLICKING A MOVIE IT SHOULD OPEN AND CLOSE <---------------------------------------
 
-  export const handleOpenPopUp = (id) => {
-    axios(movieAPI + "&i=" + id).then( ({ data }) => {
-      let result = data
+//   export const handleOpenPopUp = (id) => {
+//     axios(movieAPI + "&i=" + id).then( ({ data }) => {
+//       let result = data
 
-      setState(prevState => {
-        return {...prevState, selected: result}
-      })
+//       setState(prevState => {
+//         return {...prevState, selected: result}
+//       })
 
-    })
+//     })
 
-  };
+//   };
 
-  export const handleClosedPopUp = () => {
+//   export const handleClosedPopUp = () => {
 
-    setState( prevState => {
-      return { ...prevState, selected: {} }
-    })
+//     setState( prevState => {
+//       return { ...prevState, selected: {} }
+//     })
 
-  };
+//   };
