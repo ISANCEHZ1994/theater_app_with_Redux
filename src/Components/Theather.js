@@ -43,7 +43,6 @@ import MovieList from './MovieList';
       };
 
 
-
     return(
        
         <>
