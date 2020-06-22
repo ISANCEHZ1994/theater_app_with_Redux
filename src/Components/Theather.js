@@ -30,18 +30,19 @@ import MovieList from './MovieList';
               return {...prevState, results: results}
             })
             console.log(data)
-            
-          }) // closes then
-        }; // closes if
-      }; // closes function
+          })
+        }; 
+      }; 
       
       const handleInput = (e) => { 
         let s = e.target.value
     
-        setState(preState => { // setState is the method that we made in the hooks above because we - since App function is not a class - a this. is not required
+        setState(preState => { 
           return { ...preState, s: s} 
         })
       };
+
+
 
     return(
        
