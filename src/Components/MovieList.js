@@ -17,13 +17,13 @@ import Movie from './Movie';
 //     };
 // }
 
-export default function MovieList(props){
+export default function MovieList({ results }){
     return(
         <> {/*creating Fragments to not take up more space*/}
             <h1 style={{textAlign: 'center'}}> here is a list of movies</h1>
                     <div style={{backgroundColor: 'blue'}}>
-                
-                <Movie/>
+            {results.map( result => ( <Movie key={result.imdbID} movie={result} /> )
+            )}
                 </div>
         </>
     );

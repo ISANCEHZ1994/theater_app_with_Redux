@@ -57,9 +57,12 @@ import Search from './Search';
                 search={search}
                 />
             <MovieList
-            />
+                results={state.results}
+                />
             
-            <Snacks/>
+            <Snacks
+
+                />
         </>
     );
 };
