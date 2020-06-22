@@ -13,7 +13,7 @@ import MovieList from './MovieList';
     // in the end could not resolve how to put all these funcitons into the Reducers and actions folder
 
 
-    const [state, setState] = useState({ // we are using hooks and giving 
+      const [state, setState] = useState({ // we are using hooks and giving 
         s:"", // a string to search the movie you are looking for
         results: [], // where we want to put our search results into
         selected: {} // when selecting a SPECIFIC movie - we want to see a everything that has to do with that movie
@@ -34,7 +34,14 @@ import MovieList from './MovieList';
           }) // closes then
         }; // closes if
       }; // closes function
+      
+      const handleInput = (e) => { 
+        let s = e.target.value
     
+        setState(preState => { // setState is the method that we made in the hooks above because we - since App function is not a class - a this. is not required
+          return { ...preState, s: s} 
+        })
+      };
 
     return(
        
