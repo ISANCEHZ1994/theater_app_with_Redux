@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 
 const movieAPIBatman = 'http://www.omdbapi.com/?apikey=91302107&s=Batman' // this works because we are giving the finished ending to the API Search
      const movieAPI =  'http://www.omdbapi.com/?apikey=91302107'
