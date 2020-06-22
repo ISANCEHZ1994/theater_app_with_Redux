@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { handleMovies } from '../store/actions'; // function needs curly boys{} or else it wont work
 import Snacks from '../Components/Snacks';
 import MovieList from './MovieList';
+import Search from './Search';
 
 
  export default function Theather(){
@@ -50,7 +51,11 @@ import MovieList from './MovieList';
             <div style={{backgroundColor: 'red'}}>
                 History of some shit about this nice theater
             </div>
-            {/* {console.log(movies)} */}
+           
+            <Search 
+                handleInput={handleInput}
+                search={search}
+                />
             <MovieList
             />
             

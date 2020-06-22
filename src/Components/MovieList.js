@@ -22,10 +22,7 @@ export default function MovieList(props){
         <> {/*creating Fragments to not take up more space*/}
             <h1 style={{textAlign: 'center'}}> here is a list of movies</h1>
                     <div style={{backgroundColor: 'blue'}}>
-                <Search 
-                handleInput={handleInput}
-                search={search}
-                />
+                
                 <Movie/>
                 </div>
         </>
