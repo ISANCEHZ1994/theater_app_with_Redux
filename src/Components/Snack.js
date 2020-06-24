@@ -7,7 +7,7 @@ export default function Snack(){
 
 
     return(
-        <h2> this is a single snack</h2>
+        <h2 style={{backgroundColor: 'green', textAlign: 'center'}}> this is a single snack</h2>
     )
 
 };
