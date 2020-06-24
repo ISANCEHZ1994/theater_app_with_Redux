@@ -3,7 +3,9 @@ import React from 'react';
 
 export default function Search ({handleInput,search}){
         return(
-          <section className='searchbox-wrap'>
+            <>
+            <h1 style={{textAlign: 'center'}}> Lets look for a movie! </h1>
+          <section className='searchbox-wrap' style={{textAlign: 'center'}}>
               <input 
                     type='text' 
                     placeholder='Search For A Movie...' 
@@ -12,5 +14,6 @@ export default function Search ({handleInput,search}){
                     onKeyPress={search}
               /> 
           </section>
+          </>
         )
 };
