@@ -20,7 +20,7 @@ import Movie from './Movie';
 export default function MovieList({ results }){
     return(
         <> {/*creating Fragments to not take up more space*/}
-            <h1 style={{textAlign: 'center'}}> Heres what we found!</h1>
+            <h1   style={{textAlign: 'center'}}> Heres what we found!</h1>
                     <div style={{backgroundColor: 'blue',textAlign: 'center'}}>
             {results.map( result => ( <Movie key={result.imdbID} movie={result} /> )
             )}
