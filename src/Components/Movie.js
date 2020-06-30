@@ -17,7 +17,7 @@ import React from 'react';
 
 export default function Movie({ movie }){
     return(
-        <div>
+        <div className='result'>
                  <h3> {movie.Title}</h3>
                 <img src={movie.Poster} alt="movie poster" />
                
