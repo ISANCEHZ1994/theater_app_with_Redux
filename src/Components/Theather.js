@@ -43,6 +43,23 @@ import Search from './Search';
         })
       };
 
+      const openPopUp = (id) => {
+        axios(apiUrl + "&i=" + id).then( ({ data }) => {
+          let result = data
+    
+          setState(prevState => {
+            return {...prevState, selected: result}
+          })
+    
+        })
+      };
+    
+      const closedPopUp = () => {
+        setState( prevState => {
+          return { ...prevState, selected: {} }
+        })
+      };
+
 
     return(
        
