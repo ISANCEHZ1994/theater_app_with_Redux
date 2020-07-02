@@ -64,6 +64,8 @@ import Search from './Search';
     return(
        
         <>
+
+        
           <h1 style={{textAlign: 'center'}}> Welcome To The ISS Theater Deluxe  </h1>
             <div style={{backgroundColor: 'red'}}>
                 History of some shit about this nice theater
@@ -80,6 +82,8 @@ import Search from './Search';
             <Snacks
 
                 />
+
+
         </>
     );
 };
