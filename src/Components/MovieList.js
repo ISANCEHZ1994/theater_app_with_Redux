@@ -20,11 +20,13 @@ import Movie from './Movie';
 export default function MovieList({ results }){
     return(
         <div className='results' >
-            <h1> Heres what we found!</h1>
+            {/* <h1> Heres what we found!</h1> */}
                     <div style={{backgroundColor: 'blue',textAlign: 'center'}}>
             {results.map( result => ( <Movie key={result.imdbID} movie={result} /> )
             )}
                 </div>
+
+                
         </div>
     );
 };
