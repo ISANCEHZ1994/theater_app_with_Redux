@@ -14,6 +14,9 @@ export default function Search ({handleInput,search}){
                     onKeyPress={search}
               /> 
           </section>
+
+          
           </>
+
         )
 };

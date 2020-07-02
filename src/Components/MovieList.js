@@ -26,7 +26,8 @@ export default function MovieList({ results }){
             )}
                 </div>
 
-                
+
+
         </div>
     );
 };
